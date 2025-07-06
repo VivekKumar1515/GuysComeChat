@@ -1,0 +1,9 @@
+FROM openjdk:17-jdk-alpine
+
+WORKDIR /app
+
+COPY target/ChatApp.jar chatapp-backend.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "chatapp-backend.jar"]

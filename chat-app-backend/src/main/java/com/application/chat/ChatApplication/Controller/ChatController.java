@@ -1,22 +1,15 @@
 package com.application.chat.ChatApplication.Controller;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.application.chat.ChatApplication.DTO.OnlineStatusDTO;
 import com.application.chat.ChatApplication.Repository.ParticipantsRepository;
 import com.application.chat.ChatApplication.Repository.RoomRepository;
 import com.application.chat.ChatApplication.model.Message;
-import com.application.chat.ChatApplication.model.MessageRequest;
 import com.application.chat.ChatApplication.model.Participant;
 import com.application.chat.ChatApplication.model.Room;
 import com.application.chat.ChatApplication.model.TypingStatus;
@@ -24,7 +17,6 @@ import com.application.chat.ChatApplication.model.TypingStatus;
 import lombok.RequiredArgsConstructor;
 
 @Controller
-@CrossOrigin("http://localhost:3000")
 @RequiredArgsConstructor
 public class ChatController {
 

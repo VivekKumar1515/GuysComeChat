@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 "use client";
 
 import type React from "react";
@@ -324,7 +326,8 @@ export default function ChatRoom() {
 
   const isTypingRef = useRef(false);
 
-  const handleTyping = () => {
+  const handleTyping = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if(e.key == "Enter") return;
     if (!stompClient) return;
 
     // Send typing event only once per typing session
